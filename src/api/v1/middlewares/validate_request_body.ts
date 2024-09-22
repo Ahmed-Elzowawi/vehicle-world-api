@@ -23,3 +23,13 @@ export const validateRequestBodyIsNotEmpty = (
     return res.status(400).json({ error: 'request body is empty' });
   else next();
 };
+
+export const validateRequestBodyIsJson = (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+  // eslint-disable-next-line
+): Response<any, Record<string, any>> | void => {
+  if (!req.is('application/json')) return res.status(415).end();
+  else next();
+};

@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import {
   validateRequestBodyIsEmpty,
+  validateRequestBodyIsJson,
   validateRequestBodyIsNotEmpty,
 } from 'api/v1/middlewares';
 import {
@@ -16,12 +17,14 @@ export const handleRouters = (vehiclesRouter: Router): Router => {
 
   vehiclesRouter.post(
     '/vehicles',
+    validateRequestBodyIsJson,
     validateRequestBodyIsNotEmpty,
     postVehicleController,
   );
 
   vehiclesRouter.patch(
     '/vehicles/:id',
+    validateRequestBodyIsJson,
     validateRequestBodyIsNotEmpty,
     patchVehicleController,
   );
