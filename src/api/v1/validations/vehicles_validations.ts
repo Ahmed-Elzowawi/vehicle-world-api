@@ -23,3 +23,25 @@ export const vehicleSchemaPostMethod = object({
 })
   .strict(true)
   .noUnknown(true, 'unknown property: ${unknown}');
+
+export const vehicleSchemaPatchMethod = object({
+  manufacturer: string().lowercase().max(30).trim().optional(),
+  model: string().lowercase().max(30).trim().optional(),
+  fuel: string().lowercase().max(20).trim().optional(),
+  type: string().lowercase().max(30).trim().optional(),
+  color: string().lowercase().max(25).trim().optional(),
+  VIN: string()
+    .length(17)
+    .matches(/^[a-zA-Z0-9]*$/, { message: 'VIN must not contain whitespace' })
+    .uppercase()
+    .optional(),
+  VRM: string()
+    .length(7)
+    .matches(/^[a-zA-Z0-9]*$/, { message: 'VRM must not contain whitespace' })
+    .uppercase()
+    .optional(),
+  used: boolean().optional(),
+  modelYear: number().max(nextYear).optional(),
+})
+  .strict(true)
+  .noUnknown(true, 'unknown property: ${unknown}');
