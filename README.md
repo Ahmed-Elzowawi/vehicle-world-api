@@ -29,15 +29,16 @@ A RESTful API server that handles GET, POST, PUT, and DELETE http methods for ve
 
 ## Built With
 
-Typescripit - Programming Language
-MongoDB - Database
-Express - Server Framework
-Node.js - Runtime Environment
-npm - Node.js Package Manager
-Docker - Containerization
-Jest - Testing Framework
-Prettier - Code Formatter
-typescript-eslint - Linter
+- Typescripit - Programming Language
+- MongoDB - Database
+- Express - Server Framework
+- Node.js - Runtime Environment
+- npm - Node.js Package Manager
+- Docker - Containerization
+- Jest - Testing Framework
+- Prettier - Code Formatter
+- typescript-eslint - Linter
+- redoc - documentation
 
 ### Dependencies
 
