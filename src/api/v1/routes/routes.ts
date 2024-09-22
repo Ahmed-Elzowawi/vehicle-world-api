@@ -7,6 +7,7 @@ import express, {
   Router,
 } from 'express';
 import { handleRouters } from '../routers/vehicle_routers';
+import { logger } from 'config';
 
 const entrypoint: string = '/api/v1';
 export const UnavailableRoute = (req: Request, res: Response) => {
@@ -20,6 +21,7 @@ const errorHandler: ErrorRequestHandler = (
   /* eslint-disable  @typescript-eslint/no-unused-vars */
   next: NextFunction,
 ) => {
+  logger.error(err);
   return res.status(400).send({ error: 'Bad Request' });
 };
 
