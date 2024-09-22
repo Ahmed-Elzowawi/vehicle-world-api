@@ -3,6 +3,7 @@ import {
   getVehicleController,
   patchVehicleController,
   postVehicleController,
+  deleteVehicleController,
 } from 'api/v1/controllers';
 
 
@@ -19,7 +20,7 @@ export const handleRouters = (vehiclesRouter: Router): Router => {
     patchVehicleController,
   );
 
-  vehiclesRouter.delete('/vehicles/:id');
+  vehiclesRouter.delete('/vehicles/:id', deleteVehicleController);
 
   return vehiclesRouter;
 };
