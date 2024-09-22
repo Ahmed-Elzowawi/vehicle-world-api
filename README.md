@@ -64,7 +64,19 @@ For **Linux** users, make sure you have **docker engine** or **docker desktop** 
 
    <br>
 
-2. Create docker containers
+2. Cd into the directory
+
+   ```sh
+   cd vehicle-world-api
+   ```
+
+   <br>
+
+3. Make sure port **50572** is not allocated
+
+   <br>
+
+4. Create docker containers
 
    ```sh
    docker compose up -d
@@ -72,7 +84,7 @@ For **Linux** users, make sure you have **docker engine** or **docker desktop** 
 
    <br>
 
-3. Have fun coding!
+5. Have fun coding!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
