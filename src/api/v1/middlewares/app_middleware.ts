@@ -1,4 +1,5 @@
 import methodOverride from 'method-override';
+import helmet from 'helmet';
 import express, { Express } from 'express';
 
 export const handleAppMiddleware = (app: Express) => {
@@ -7,4 +8,7 @@ export const handleAppMiddleware = (app: Express) => {
 
   // ability to use HTTP verbs PUT or DELETE (client only supports HTTP verbs GET and POST)
   app.use(methodOverride('_method'));
+
+  // secure HTTP response headers
+  app.use(helmet());
 };
