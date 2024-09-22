@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { Vehicle } from 'api/v1/models';
+import { VehicleType } from 'api/v1/types/index';
 
 export const getVehicleController = async (
   req: Request<{ id: string }>,
@@ -36,4 +37,19 @@ export const getVehicleController = async (
 
   if (!vehicle) return res.status(404).end();
   else return res.status(200).json({ data: vehicle });
+};
+
+export const postVehicleController = async (
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  req: Request<{}, {}, VehicleType>,
+  res: Response,
+  // eslint-disable-next-line
+): Promise<Response<any, Record<string, any>> | undefined> => {
+  let isError = false;
+  const newVehicle = await Vehicle.create(req.body).catch(() => {
+    isError = true;
+    return res.status(500).end();
+  });
+  if (isError) return;
+  else return res.status(201).json({ data: newVehicle });
 };
