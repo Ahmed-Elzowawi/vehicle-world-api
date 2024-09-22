@@ -3,6 +3,7 @@ import {
   validateRequestBodyIsEmpty,
   validateRequestBodyIsJson,
   validateRequestBodyIsNotEmpty,
+  validateVehicleRequestBody,
 } from 'api/v1/middlewares';
 import {
   getVehicleController,
@@ -10,8 +11,11 @@ import {
   postVehicleController,
   deleteVehicleController,
 } from 'api/v1/controllers';
+import { vehicleSchemaPatchMethod, vehicleSchemaPostMethod } from 'api/v1/validations';
 
+export const validateVehiclePostRequestBody = validateVehicleRequestBody(vehicleSchemaPostMethod);
 
+export const validateVehiclePatchRequestBody = validateVehicleRequestBody(vehicleSchemaPatchMethod);
 export const handleRouters = (vehiclesRouter: Router): Router => {
   vehiclesRouter.get('/vehicles/:id', validateRequestBodyIsEmpty, getVehicleController);
 
@@ -19,6 +23,7 @@ export const handleRouters = (vehiclesRouter: Router): Router => {
     '/vehicles',
     validateRequestBodyIsJson,
     validateRequestBodyIsNotEmpty,
+    validateVehiclePostRequestBody,
     postVehicleController,
   );
 
@@ -26,6 +31,7 @@ export const handleRouters = (vehiclesRouter: Router): Router => {
     '/vehicles/:id',
     validateRequestBodyIsJson,
     validateRequestBodyIsNotEmpty,
+    validateVehiclePatchRequestBody,
     patchVehicleController,
   );
 

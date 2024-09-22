@@ -33,3 +33,16 @@ export const validateRequestBodyIsJson = (
   if (!req.is('application/json')) return res.status(415).end();
   else next();
 };
+
+export const validateVehicleRequestBody =
+  (schema: ObjectSchema<AnyObject>) => async (req: Request, res: Response, next: NextFunction) => {
+    const body = req.body;
+    let isError = false;
+
+    await schema.validate(body).catch((err: ValidationError) => {
+      isError = true;
+      return res.status(422).json({ error: err.message });
+    });
+    if (isError) return;
+    else next();
+  };
