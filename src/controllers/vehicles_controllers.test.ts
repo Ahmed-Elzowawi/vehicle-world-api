@@ -9,7 +9,7 @@ import {
 } from './vehicles_controllers.js';
 import { Vehicle } from '../models/index.js';
 
-jest.mock('api/v1/models', () => {
+jest.mock('../models', () => {
   return {
     Vehicle: {
       findById: jest.fn().mockReturnValue({ exec: jest.fn().mockResolvedValue(null) }),
