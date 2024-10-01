@@ -7,8 +7,8 @@
   "scripts": {
     "test": "jest src/",
     "testName": "jest -t",
-    "build": "npx tsc",
     "testCoverage": "jest --coverage=true src/",
+    "build": "npx tsc --project tsconfig.production.json",
     "dev": "npx tsx watch ./src/server.ts",
     "start": "npm run build && node ./build/server.js",
     "format": "npx prettier --write .",
