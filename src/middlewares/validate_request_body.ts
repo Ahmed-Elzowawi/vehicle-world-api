@@ -6,7 +6,6 @@ export const validateRequestBodyIsEmpty = (
   req: Request,
   res: Response,
   next: NextFunction,
-  // eslint-disable-next-line
 ): Response<any, Record<string, any>> | void => {
   if (req.body && Object.keys(req.body).length > 0)
     return res.status(400).json({ error: `request body is not required for ${req.method} method` });
@@ -17,7 +16,6 @@ export const validateRequestBodyIsNotEmpty = (
   req: Request,
   res: Response,
   next: NextFunction,
-  // eslint-disable-next-line
 ): Response<any, Record<string, any>> | void => {
   if (!req.body || Object.keys(req.body).length === 0)
     return res.status(400).json({ error: 'request body is empty' });
@@ -28,7 +26,6 @@ export const validateRequestBodyIsJson = (
   req: Request,
   res: Response,
   next: NextFunction,
-  // eslint-disable-next-line
 ): Response<any, Record<string, any>> | void => {
   if (!req.is('application/json')) return res.status(415).end();
   else next();

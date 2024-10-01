@@ -32,7 +32,6 @@ describe('getVehicleController', () => {
   } as unknown as Response;
 
   it("should responsd with status code 400 when req.params doesn't exist", async () => {
-    /* eslint-disable  @typescript-eslint/no-explicit-any */
     const req = {} as unknown as Request<any>;
     await getVehicleController(req, res);
     expect(res.status).toHaveBeenCalledWith(400);
@@ -191,7 +190,6 @@ describe('patchVehicleController', () => {
   } as unknown as Response;
 
   it("should responsd with status code 400 when req.params doesn't exist", async () => {
-    /* eslint-disable  @typescript-eslint/no-explicit-any */
     const req = {} as unknown as Request<any>;
     await patchVehicleController(req, res);
     expect(res.status).toHaveBeenCalledWith(400);
@@ -270,7 +268,6 @@ describe('deleteVehicleController', () => {
   } as unknown as Response;
 
   it("should responsd with status code 400 when req.params doesn't exist", async () => {
-    /* eslint-disable  @typescript-eslint/no-explicit-any */
     const req = {} as unknown as Request<any>;
     await deleteVehicleController(req, res);
     expect(res.status).toHaveBeenCalledWith(400);

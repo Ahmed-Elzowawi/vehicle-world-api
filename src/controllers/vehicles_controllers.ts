@@ -5,7 +5,6 @@ import { VehicleType } from '../types/index.js';
 export const getVehicleController = async (
   req: Request<{ id: string }>,
   res: Response,
-  // eslint-disable-next-line
 ): Promise<Response<any, Record<string, any>> | undefined> => {
   if (!req.params) return res.status(400).end();
   const vehicleId = req.params.id;
@@ -43,7 +42,6 @@ export const postVehicleController = async (
   // eslint-disable-next-line @typescript-eslint/ban-types
   req: Request<{}, {}, VehicleType>,
   res: Response,
-  // eslint-disable-next-line
 ): Promise<Response<any, Record<string, any>> | undefined> => {
   let isError = false;
   const newVehicle = await Vehicle.create(req.body).catch(() => {
@@ -57,7 +55,6 @@ export const postVehicleController = async (
 export const patchVehicleController = async (
   req: Request<{ id: string }>,
   res: Response,
-  // eslint-disable-next-line
 ): Promise<Response<any, Record<string, any>> | undefined> => {
   if (!req.params) return res.status(400).end();
   const vehicleId = req.params.id;
@@ -79,7 +76,6 @@ export const patchVehicleController = async (
 export const deleteVehicleController = async (
   req: Request<{ id: string }>,
   res: Response,
-  // eslint-disable-next-line
 ): Promise<Response<any, Record<string, any>> | undefined> => {
   if (!req.params) return res.status(400).end();
   const vehicleId = req.params.id;
