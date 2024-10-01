@@ -18,7 +18,7 @@ export const main = async () => {
   });
 
   process.on('SIGTERM', async () => {
-    logger.error('SIGTERM signal received: closing HTTP server');
+    logger.info('SIGTERM signal received: closing HTTP server');
     logger.info('Cleaning up resources before exiting...');
     logger.info('Closing mongoDB database connection...');
 
