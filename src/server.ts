@@ -31,9 +31,9 @@ export const main = async () => {
     if (isError) logger.error('Failed to close mongoDB database connection');
     else logger.info('MongoDB database connection closed successfully');
 
-    server.close(() => logger.info('HTTP server closed'));
     logger.info('Resources cleaned up successfully');
     logger.info('Closing HTTP server...');
+    server.close(() => logger.info('HTTP server closed'));
   });
 };
 
