@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import { establishDbConnection, logger } from './config/index.js';
 import { Server } from 'http';
-import mongoose, { MongooseError } from 'mongoose';
+import mongoose from 'mongoose';
 import { app } from './app.js';
 
 export const main = async () => {
