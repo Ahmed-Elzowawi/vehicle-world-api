@@ -12,7 +12,7 @@
     "dev": "npx tsx watch ./src/server.ts",
     "start": "npm run build && node ./build/server.js",
     "format": "npx prettier --write .",
-    "lint": "npx eslint --fix ."
+    "lint": "npx eslint --fix ./src"
   },
   "repository": "https://github.com/Ahmed-Elzowawi/vehicle-world-api.git",
   "license": "MIT",
