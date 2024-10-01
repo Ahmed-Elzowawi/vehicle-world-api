@@ -12,9 +12,9 @@ export const productionLogger = createLogger({
   format: combine(timestamp(), format.errors({ stack: true }), format.json()),
   defaultMeta: { service: 'Vehicle World API server' },
   transports: [
-    new transports.File({ filename: 'info.log', level: 'error' }),
-    new transports.File({ filename: 'warn.log', level: 'warn' }),
-    new transports.File({ filename: 'error.log', level: 'info' }),
+    new transports.File({ filename: './info.log', level: 'info' }),
+    new transports.File({ filename: './warn.log', level: 'warn' }),
+    new transports.File({ filename: './error.log', level: 'error' }),
   ],
 });
 
