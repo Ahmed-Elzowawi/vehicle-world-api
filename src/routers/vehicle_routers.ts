@@ -4,14 +4,14 @@ import {
   validateRequestBodyIsJson,
   validateRequestBodyIsNotEmpty,
   validateVehicleRequestBody,
-} from 'api/v1/middlewares';
+} from '../middlewares/index.js';
 import {
   getVehicleController,
   patchVehicleController,
   postVehicleController,
   deleteVehicleController,
-} from 'api/v1/controllers';
-import { vehicleSchemaPatchMethod, vehicleSchemaPostMethod } from 'api/v1/validations';
+} from '../controllers/index.js';
+import { vehicleSchemaPatchMethod, vehicleSchemaPostMethod } from '../validations/index.js';
 
 export const validateVehiclePostRequestBody = validateVehicleRequestBody(vehicleSchemaPostMethod);
 

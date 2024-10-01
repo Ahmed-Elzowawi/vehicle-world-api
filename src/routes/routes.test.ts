@@ -1,5 +1,5 @@
-import { handleRouters } from 'api/v1/routers';
-import { handleRoutes, UnavailableRoute, vehiclesRouter } from './routes';
+import { handleRouters } from '../routers/index.js';
+import { handleRoutes, UnavailableRoute, vehiclesRouter } from './routes.js';
 import { Express } from 'express';
 
 const app = { use: jest.fn() } as unknown as Express;

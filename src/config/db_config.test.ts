@@ -1,6 +1,6 @@
-import { establishDbConnection } from './db_config';
+import { establishDbConnection } from './db_config.js';
 import mongoose from 'mongoose';
-import { logger } from './logger';
+import { logger } from './logger.js';
 
 jest.mock('mongoose');
 jest.mock('./logger');

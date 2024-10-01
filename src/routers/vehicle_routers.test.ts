@@ -2,19 +2,19 @@ import {
   handleRouters,
   validateVehiclePatchRequestBody,
   validateVehiclePostRequestBody,
-} from './vehicle_routers';
+} from './vehicle_routers.js';
 import { Router } from 'express';
 import {
   validateRequestBodyIsEmpty,
   validateRequestBodyIsJson,
   validateRequestBodyIsNotEmpty,
-} from 'api/v1/middlewares';
+} from '../middlewares/index.js';
 import {
   getVehicleController,
   patchVehicleController,
   postVehicleController,
   deleteVehicleController,
-} from 'api/v1/controllers';
+} from '../controllers/index.js';
 
 describe('Vehcile Routers', () => {
   const mockedVehicleRouter = {

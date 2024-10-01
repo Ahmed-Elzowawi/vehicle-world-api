@@ -1,1 +1,1 @@
-export * from './vehicles_controllers';
+export * from './vehicles_controllers.js';

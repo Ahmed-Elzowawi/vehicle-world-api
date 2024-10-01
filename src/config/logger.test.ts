@@ -1,5 +1,5 @@
 import { createLogger, format, transports } from 'winston';
-import { developmentLogger, productionLogger } from './logger';
+import { developmentLogger, productionLogger } from './logger.js';
 
 const { combine, timestamp } = format;
 

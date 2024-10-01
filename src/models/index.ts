@@ -1,1 +1,1 @@
-export { Vehicle } from './vehicle';
+export { Vehicle } from './vehicle.js';

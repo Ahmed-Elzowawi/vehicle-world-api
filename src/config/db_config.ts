@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { logger } from './logger';
+import { logger } from './logger.js';
 
 const userName = process.env.DATABASE_USER;
 const password = encodeURIComponent(process.env.DATABASE_PASSWORD);

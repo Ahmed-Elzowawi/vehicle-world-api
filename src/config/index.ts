@@ -1,2 +1,2 @@
-export { establishDbConnection } from './db_config';
-export { logger } from './logger';
+export { establishDbConnection } from './db_config.js';
+export { logger } from './logger.js';

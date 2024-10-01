@@ -6,8 +6,8 @@ import {
   postVehicleController,
   patchVehicleController,
   deleteVehicleController,
-} from './vehicles_controllers';
-import { Vehicle } from 'api/v1/models';
+} from './vehicles_controllers.js';
+import { Vehicle } from '../models/index.js';
 
 jest.mock('api/v1/models', () => {
   return {

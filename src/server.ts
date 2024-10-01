@@ -1,9 +1,8 @@
 import 'dotenv/config';
-import { establishDbConnection } from 'config/index';
+import { establishDbConnection, logger } from './config/index.js';
 import { Server } from 'http';
-import { logger } from 'config/index';
-import mongoose from 'mongoose';
-import { app } from './app';
+import mongoose, { MongooseError } from 'mongoose';
+import { app } from './app.js';
 
 export const main = async () => {
   const port: number = parseInt(process.env.SERVER_PORT);

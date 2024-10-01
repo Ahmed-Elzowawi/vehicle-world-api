@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { Vehicle } from 'api/v1/models';
-import { VehicleType } from 'api/v1/types/index';
+import { Vehicle } from '../models/index.js';
+import { VehicleType } from '../types/index.js';
 
 export const getVehicleController = async (
   req: Request<{ id: string }>,

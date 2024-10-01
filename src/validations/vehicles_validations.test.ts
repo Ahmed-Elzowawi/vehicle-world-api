@@ -1,4 +1,4 @@
-import { vehicleSchemaPostMethod, vehicleSchemaPatchMethod } from './index';
+import { vehicleSchemaPostMethod, vehicleSchemaPatchMethod } from './index.js';
 import { ValidationError } from 'yup';
 
 describe('vehicleSchemaPostMethod', () => {

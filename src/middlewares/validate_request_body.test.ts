@@ -4,7 +4,7 @@ import {
   validateRequestBodyIsJson,
   validateRequestBodyIsNotEmpty,
   validateVehicleRequestBody,
-} from './validate_request_body';
+} from './validate_request_body.js';
 import { AnyObject, ObjectSchema } from 'yup';
 
 describe('validateRequestBodyIsEmpty', () => {

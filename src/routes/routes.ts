@@ -6,8 +6,8 @@ import express, {
   Response,
   Router,
 } from 'express';
-import { handleRouters } from '../routers/vehicle_routers';
-import { logger } from 'config';
+import { handleRouters } from '../routers/index.js';
+import { logger } from '../config/index.js';
 
 const entrypoint: string = '/api/v1';
 export const UnavailableRoute = (req: Request, res: Response) => {

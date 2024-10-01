@@ -1,6 +1,6 @@
 import express, { Express } from 'express';
 import { expect } from '@jest/globals';
-import { handleAppMiddleware } from './app_middleware';
+import { handleAppMiddleware } from './app_middleware.js';
 import methodOverride from 'method-override';
 import helmet from 'helmet';
 import compression from 'compression';
