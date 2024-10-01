@@ -5,10 +5,10 @@
   "main": "server.ts",
   "type": "module",
   "scripts": {
-    "test": "jest",
+    "test": "jest src/",
     "testName": "jest -t",
-    "testCoverage": "jest --coverage=true",
     "build": "npx tsc",
+    "testCoverage": "jest --coverage=true src/",
     "dev": "npx tsx watch ./src/server.ts",
     "start": "npm run build && node ./build/server.js",
     "format": "npx prettier --write .",
