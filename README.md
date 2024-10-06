@@ -76,23 +76,15 @@ For **Linux** users, make sure you have **docker engine** or **docker desktop** 
 
    <br>
 
-4. Install dependencies
+4. Create docker containers
 
    ```sh
-   npm install
+   docker compose up --build -d
    ```
 
    <br>
 
-5. Create docker containers
-
-   ```sh
-   docker compose up -d
-   ```
-
-   <br>
-
-6. Have fun coding!
+5. Have fun coding!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
