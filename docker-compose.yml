@@ -3,6 +3,7 @@ services:
     image: vehicle_world_api_app:1.0.0
     build:
       dockerfile: ./app.Dockerfile
+    container_name: vehicle_world_api_app
     ports:
       - 50572:5000
     depends_on:

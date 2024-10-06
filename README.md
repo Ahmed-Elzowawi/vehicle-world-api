@@ -103,7 +103,7 @@ To run the tests:
 - Outside docker container
 
   ```sh
-  docker compose exec app npm run test
+  docker exec -it vehicle_world_api_app npm run test
   ```
 
 <br>
